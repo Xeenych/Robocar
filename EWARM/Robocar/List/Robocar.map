@@ -1,0 +1,490 @@
+###############################################################################
+#
+# IAR ELF Linker V7.30.4.8167/W32 for ARM                 15/Apr/2019  22:36:27
+# Copyright 2007-2014 IAR Systems AB.
+#
+#    Output file  =  D:\Projects\Robocar\EWARM\Robocar\Exe\Robocar.out
+#    Map file     =  D:\Projects\Robocar\EWARM\Robocar/List\Robocar.map
+#    Command line =  
+#        D:\Projects\Robocar\EWARM\Robocar\Obj\BiSonar.o
+#        D:\Projects\Robocar\EWARM\Robocar\Obj\Buzzer.o
+#        D:\Projects\Robocar\EWARM\Robocar\Obj\Led2.o
+#        D:\Projects\Robocar\EWARM\Robocar\Obj\main.o
+#        D:\Projects\Robocar\EWARM\Robocar\Obj\Motor.o
+#        D:\Projects\Robocar\EWARM\Robocar\Obj\robocar.o
+#        D:\Projects\Robocar\EWARM\Robocar\Obj\Sonar.o
+#        D:\Projects\Robocar\EWARM\Robocar\Obj\startup_stm32f103xe.o
+#        D:\Projects\Robocar\EWARM\Robocar\Obj\stm32f1xx_it.o
+#        D:\Projects\Robocar\EWARM\Robocar\Obj\stm32f1xx_ll_dma.o
+#        D:\Projects\Robocar\EWARM\Robocar\Obj\stm32f1xx_ll_exti.o
+#        D:\Projects\Robocar\EWARM\Robocar\Obj\stm32f1xx_ll_gpio.o
+#        D:\Projects\Robocar\EWARM\Robocar\Obj\stm32f1xx_ll_pwr.o
+#        D:\Projects\Robocar\EWARM\Robocar\Obj\stm32f1xx_ll_rcc.o
+#        D:\Projects\Robocar\EWARM\Robocar\Obj\stm32f1xx_ll_tim.o
+#        D:\Projects\Robocar\EWARM\Robocar\Obj\stm32f1xx_ll_utils.o
+#        D:\Projects\Robocar\EWARM\Robocar\Obj\system_stm32f1xx.o -o
+#        D:\Projects\Robocar\EWARM\Robocar\Exe\Robocar.out --map
+#        D:\Projects\Robocar\EWARM\Robocar/List\Robocar.map --config
+#        D:\Projects\Robocar\EWARM/stm32f103xe_flash.icf --semihosting --entry
+#        __iar_program_start --redirect __write=__write_buffered --vfe
+#
+###############################################################################
+
+*******************************************************************************
+*** RUNTIME MODEL ATTRIBUTES
+***
+
+CppFlavor       = *
+__CPP_Language  = EC++
+__SystemLibrary = DLib
+
+
+*******************************************************************************
+*** PLACEMENT SUMMARY
+***
+
+"A1":  place at 0x08000000 { ro section .intvec };
+"P1":  place in [from 0x08000000 to 0x0807ffff] { ro };
+"P2":  place in [from 0x20000000 to 0x2000ffff] { rw, block CSTACK, block HEAP };
+
+  Section            Kind        Address    Size  Object
+  -------            ----        -------    ----  ------
+"A1":                                      0x130
+  .intvec            ro code  0x08000000   0x130  startup_stm32f103xe.o [1]
+                            - 0x08000130   0x130
+
+"P1":                                     0x1c38
+  .text              ro code  0x08000130   0xa62  main.o [1]
+  .text              ro code  0x08000b92    0x2e  copy_init3.o [5]
+  .text              ro code  0x08000bc0   0x16c  robocar.o [1]
+  .text              ro code  0x08000d2c    0x40  stm32f1xx_ll_utils.o [1]
+  .text              ro code  0x08000d6c     0x6  ABImemclr4.o [5]
+  .text              ro code  0x08000d72    0x12  stm32f1xx_it.o [1]
+  .text              ro code  0x08000d84   0x3b0  stm32f1xx_ll_tim.o [1]
+  .text              ro code  0x08001134   0x146  stm32f1xx_ll_gpio.o [1]
+  .text              ro code  0x0800127c   0x254  Sonar.o [1]
+  .text              ro code  0x080014d0    0x2e  BiSonar.o [1]
+  .text              ro code  0x080014fe    0x8e  Led2.o [1]
+  .text              ro code  0x0800158c    0x48  Buzzer.o [1]
+  .text              ro code  0x080015d4    0x8c  Motor.o [1]
+  .text              ro code  0x08001660    0x24  FltCmpGe.o [4]
+  .text              ro code  0x08001684    0x32  ABImemset48.o [5]
+  .text              ro code  0x080016b8    0x1c  I32ToDbl.o [4]
+  .text              ro code  0x080016d4   0x1a2  DblMul.o [4]
+  .text              ro code  0x08001878   0x246  DblDiv.o [4]
+  .text              ro code  0x08001ac0    0x90  DblToFlt.o [4]
+  .text              ro code  0x08001b50    0x68  system_stm32f1xx.o [1]
+  .text              ro code  0x08001bb8    0x28  data_init.o [5]
+  .iar.init_table    const    0x08001be0    0x14  - Linker created -
+  .text              ro code  0x08001bf4    0x1a  cmain.o [5]
+  .text              ro code  0x08001c0e     0x4  low_level_init.o [3]
+  .text              ro code  0x08001c12     0x4  exit.o [3]
+  .text              ro code  0x08001c18     0xa  cexit.o [5]
+  .text              ro code  0x08001c24    0x14  exit.o [6]
+  .text              ro code  0x08001c38    0x10  startup_stm32f103xe.o [1]
+  .text              ro code  0x08001c48     0xc  cstartup_M.o [5]
+  .rodata            const    0x08001c54     0x8  main.o [1]
+  .rodata            const    0x08001c5c     0x8  main.o [1]
+  .rodata            const    0x08001c64     0x8  main.o [1]
+  .rodata            const    0x08001c6c     0x8  main.o [1]
+  .text              ro code  0x08001c74     0x4  startup_stm32f103xe.o [1]
+  .text              ro code  0x08001c78     0x4  startup_stm32f103xe.o [1]
+  .text              ro code  0x08001c7c     0x4  startup_stm32f103xe.o [1]
+  .text              ro code  0x08001c80     0x4  startup_stm32f103xe.o [1]
+  .text              ro code  0x08001c84     0x4  startup_stm32f103xe.o [1]
+  .text              ro code  0x08001c88     0x4  startup_stm32f103xe.o [1]
+  .text              ro code  0x08001c8c     0x4  startup_stm32f103xe.o [1]
+  .text              ro code  0x08001c90     0x4  startup_stm32f103xe.o [1]
+  .text              ro code  0x08001c94     0x4  startup_stm32f103xe.o [1]
+  .text              ro code  0x08001c98     0x4  startup_stm32f103xe.o [1]
+  .text              ro code  0x08001c9c     0x4  startup_stm32f103xe.o [1]
+  .text              ro code  0x08001ca0     0x4  startup_stm32f103xe.o [1]
+  .text              ro code  0x08001ca4     0x4  startup_stm32f103xe.o [1]
+  .text              ro code  0x08001ca8     0x4  startup_stm32f103xe.o [1]
+  .text              ro code  0x08001cac     0x4  startup_stm32f103xe.o [1]
+  .text              ro code  0x08001cb0     0x4  startup_stm32f103xe.o [1]
+  .text              ro code  0x08001cb4     0x4  startup_stm32f103xe.o [1]
+  .text              ro code  0x08001cb8     0x4  startup_stm32f103xe.o [1]
+  .text              ro code  0x08001cbc     0x4  startup_stm32f103xe.o [1]
+  .text              ro code  0x08001cc0     0x4  startup_stm32f103xe.o [1]
+  .text              ro code  0x08001cc4     0x4  startup_stm32f103xe.o [1]
+  .text              ro code  0x08001cc8     0x4  startup_stm32f103xe.o [1]
+  .text              ro code  0x08001ccc     0x4  startup_stm32f103xe.o [1]
+  .text              ro code  0x08001cd0     0x4  startup_stm32f103xe.o [1]
+  .text              ro code  0x08001cd4     0x4  startup_stm32f103xe.o [1]
+  .text              ro code  0x08001cd8     0x4  startup_stm32f103xe.o [1]
+  .text              ro code  0x08001cdc     0x4  startup_stm32f103xe.o [1]
+  .text              ro code  0x08001ce0     0x4  startup_stm32f103xe.o [1]
+  .text              ro code  0x08001ce4     0x4  startup_stm32f103xe.o [1]
+  .text              ro code  0x08001ce8     0x4  startup_stm32f103xe.o [1]
+  .text              ro code  0x08001cec     0x4  startup_stm32f103xe.o [1]
+  .text              ro code  0x08001cf0     0x4  startup_stm32f103xe.o [1]
+  .text              ro code  0x08001cf4     0x4  startup_stm32f103xe.o [1]
+  .text              ro code  0x08001cf8     0x4  startup_stm32f103xe.o [1]
+  .text              ro code  0x08001cfc     0x4  startup_stm32f103xe.o [1]
+  .text              ro code  0x08001d00     0x4  startup_stm32f103xe.o [1]
+  .text              ro code  0x08001d04     0x4  startup_stm32f103xe.o [1]
+  .text              ro code  0x08001d08     0x4  startup_stm32f103xe.o [1]
+  .text              ro code  0x08001d0c     0x4  startup_stm32f103xe.o [1]
+  .text              ro code  0x08001d10     0x4  startup_stm32f103xe.o [1]
+  .text              ro code  0x08001d14     0x4  startup_stm32f103xe.o [1]
+  .text              ro code  0x08001d18     0x4  startup_stm32f103xe.o [1]
+  .text              ro code  0x08001d1c     0x4  startup_stm32f103xe.o [1]
+  .text              ro code  0x08001d20     0x4  startup_stm32f103xe.o [1]
+  .text              ro code  0x08001d24     0x4  startup_stm32f103xe.o [1]
+  .text              ro code  0x08001d28     0x4  startup_stm32f103xe.o [1]
+  .text              ro code  0x08001d2c     0x4  startup_stm32f103xe.o [1]
+  .text              ro code  0x08001d30     0x4  startup_stm32f103xe.o [1]
+  .text              ro code  0x08001d34     0x4  startup_stm32f103xe.o [1]
+  .text              ro code  0x08001d38     0x4  startup_stm32f103xe.o [1]
+  .text              ro code  0x08001d3c     0x4  startup_stm32f103xe.o [1]
+  .text              ro code  0x08001d40     0x4  startup_stm32f103xe.o [1]
+  .text              ro code  0x08001d44     0x4  startup_stm32f103xe.o [1]
+  .text              ro code  0x08001d48     0x4  startup_stm32f103xe.o [1]
+  .text              ro code  0x08001d4c     0x4  startup_stm32f103xe.o [1]
+  .text              ro code  0x08001d50     0x4  startup_stm32f103xe.o [1]
+  .text              ro code  0x08001d54     0x4  startup_stm32f103xe.o [1]
+  .text              ro code  0x08001d58     0x4  startup_stm32f103xe.o [1]
+  .text              ro code  0x08001d5c     0x4  startup_stm32f103xe.o [1]
+  .text              ro code  0x08001d60     0x4  startup_stm32f103xe.o [1]
+  .rodata            const    0x08001d64     0x0  copy_init3.o [5]
+  Initializer bytes  const    0x08001d64     0x4  <for P2 s0>
+                            - 0x08001d68  0x1c38
+
+"P2":                                      0x408
+  P2 s0                       0x20000000     0x4  <Init block>
+    .data            inited   0x20000000     0x4  system_stm32f1xx.o [1]
+  CSTACK                      0x20000008   0x400  <Block>
+    CSTACK           uninit   0x20000008   0x400  <Block tail>
+                            - 0x20000408   0x408
+
+
+*******************************************************************************
+*** INIT TABLE
+***
+
+          Address     Size
+          -------     ----
+Copy (__iar_copy_init3)
+    1 source range, total size 0x4:
+          0x08001d64   0x4
+    1 destination range, total size 0x4:
+          0x20000000   0x4
+
+
+
+*******************************************************************************
+*** MODULE SUMMARY
+***
+
+    Module                 ro code  ro data  rw data
+    ------                 -------  -------  -------
+D:\Projects\Robocar\EWARM\Robocar\Obj: [1]
+    BiSonar.o                   46
+    Buzzer.o                    72
+    Led2.o                     142
+    Motor.o                    140
+    Sonar.o                    596
+    main.o                   2 658       32
+    robocar.o                  364
+    startup_stm32f103xe.o      560
+    stm32f1xx_it.o              18
+    stm32f1xx_ll_gpio.o        326
+    stm32f1xx_ll_tim.o         944
+    stm32f1xx_ll_utils.o        64
+    system_stm32f1xx.o         104        4        4
+    ------------------------------------------------
+    Total:                   6 034       36        4
+
+command line: [2]
+    ------------------------------------------------
+    Total:
+
+dl7M_tln.a: [3]
+    exit.o                       4
+    low_level_init.o             4
+    ------------------------------------------------
+    Total:                       8
+
+m7M_tl.a: [4]
+    DblDiv.o                   582
+    DblMul.o                   418
+    DblToFlt.o                 144
+    FltCmpGe.o                  36
+    I32ToDbl.o                  28
+    ------------------------------------------------
+    Total:                   1 208
+
+rt7M_tl.a: [5]
+    ABImemclr4.o                 6
+    ABImemset48.o               50
+    cexit.o                     10
+    cmain.o                     26
+    copy_init3.o                46
+    cstartup_M.o                12
+    data_init.o                 40
+    ------------------------------------------------
+    Total:                     190
+
+shb_l.a: [6]
+    exit.o                      20
+    ------------------------------------------------
+    Total:                      20
+
+    Gaps                        12
+    Linker created                       20    1 024
+----------------------------------------------------
+    Grand Total:             7 472       56    1 028
+
+
+*******************************************************************************
+*** ENTRY LIST
+***
+
+Entry                      Address   Size  Type      Object
+-----                      -------   ----  ----      ------
+.iar.init_table$$Base   0x08001be0          --   Gb  - Linker created -
+.iar.init_table$$Limit  0x08001bf4          --   Gb  - Linker created -
+?main                   0x08001bf5         Code  Gb  cmain.o [5]
+BiSonar::BiSonar(Sonar *, Sonar *)
+                        0x080014d1    0x6  Code  Gb  BiSonar.o [1]
+BiSonar::Trigger2()     0x080014d7   0x28  Code  Gb  BiSonar.o [1]
+BusFault_Handler        0x08000d79    0x2  Code  Gb  stm32f1xx_it.o [1]
+Buzzer::Buzzer(TIM_TypeDef *, unsigned int)
+                        0x080015a3   0x32  Code  Gb  Buzzer.o [1]
+CSTACK$$Base            0x20000008          --   Gb  - Linker created -
+CSTACK$$Limit           0x20000408          --   Gb  - Linker created -
+DebugMon_Handler        0x08000d7f    0x2  Code  Gb  stm32f1xx_it.o [1]
+Error_Handler           0x08000b91    0x2  Code  Gb  main.o [1]
+HardFault_Handler       0x08000d75    0x2  Code  Gb  stm32f1xx_it.o [1]
+LL_APB1_GRP1_EnableClock(unsigned int)
+                        0x0800020b   0x1e  Code  Lc  main.o [1]
+LL_APB2_GRP1_EnableClock(unsigned int)
+                        0x08000229   0x1e  Code  Lc  main.o [1]
+LL_FLASH_GetLatency()   0x0800025b    0xc  Code  Lc  main.o [1]
+LL_FLASH_SetLatency(unsigned int)
+                        0x08000247   0x14  Code  Lc  main.o [1]
+LL_GPIO_AF_EnableRemap_SWJ()
+                        0x08000529   0x1e  Code  Lc  main.o [1]
+LL_GPIO_Init            0x080011f5   0x86  Code  Gb  stm32f1xx_ll_gpio.o [1]
+LL_GPIO_ResetOutputPin(GPIO_TypeDef *, unsigned int)
+                        0x08001507    0x8  Code  Lc  Led2.o [1]
+LL_GPIO_ResetOutputPin(GPIO_TypeDef *, unsigned int)
+                        0x08000521    0x8  Code  Lc  main.o [1]
+LL_GPIO_ResetOutputPin(GPIO_TypeDef *, unsigned int)
+                        0x08001285    0x8  Code  Lc  Sonar.o [1]
+LL_GPIO_SetOutputPin(GPIO_TypeDef *, unsigned int)
+                        0x080014ff    0x8  Code  Lc  Led2.o [1]
+LL_GPIO_SetOutputPin(GPIO_TypeDef *, unsigned int)
+                        0x08000519    0x8  Code  Lc  main.o [1]
+LL_GPIO_SetOutputPin(GPIO_TypeDef *, unsigned int)
+                        0x0800127d    0x8  Code  Lc  Sonar.o [1]
+LL_GPIO_SetPinMode(GPIO_TypeDef *, unsigned int, unsigned int)
+                        0x08001135   0x36  Code  Lc  stm32f1xx_ll_gpio.o [1]
+LL_GPIO_SetPinOutputType(GPIO_TypeDef *, unsigned int, unsigned int)
+                        0x080011a1   0x36  Code  Lc  stm32f1xx_ll_gpio.o [1]
+LL_GPIO_SetPinPull(GPIO_TypeDef *, unsigned int, unsigned int)
+                        0x080011d7   0x1e  Code  Lc  stm32f1xx_ll_gpio.o [1]
+LL_GPIO_SetPinSpeed(GPIO_TypeDef *, unsigned int, unsigned int)
+                        0x0800116b   0x36  Code  Lc  stm32f1xx_ll_gpio.o [1]
+LL_Init1msTick          0x08000d45   0x10  Code  Gb  stm32f1xx_ll_utils.o [1]
+LL_InitTick(unsigned int, unsigned int)
+                        0x08000d2d   0x18  Code  Lc  stm32f1xx_ll_utils.o [1]
+LL_RCC_GetSysClkSource()
+                        0x08000189    0xc  Code  Lc  main.o [1]
+LL_RCC_HSE_Enable()     0x08000155   0x12  Code  Lc  main.o [1]
+LL_RCC_HSE_IsReady()    0x08000167    0xe  Code  Lc  main.o [1]
+LL_RCC_PLL_ConfigDomain_SYS(unsigned int, unsigned int)
+                        0x080001f1   0x1a  Code  Lc  main.o [1]
+LL_RCC_PLL_Enable()     0x080001d1   0x12  Code  Lc  main.o [1]
+LL_RCC_PLL_IsReady()    0x080001e3    0xe  Code  Lc  main.o [1]
+LL_RCC_SetAHBPrescaler(unsigned int)
+                        0x08000195   0x14  Code  Lc  main.o [1]
+LL_RCC_SetAPB1Prescaler(unsigned int)
+                        0x080001a9   0x14  Code  Lc  main.o [1]
+LL_RCC_SetAPB2Prescaler(unsigned int)
+                        0x080001bd   0x14  Code  Lc  main.o [1]
+LL_RCC_SetSysClkSource(unsigned int)
+                        0x08000175   0x14  Code  Lc  main.o [1]
+LL_SYSTICK_SetClkSource(unsigned int)
+                        0x08000267   0x28  Code  Lc  main.o [1]
+LL_SetSystemCoreClock   0x08000d55    0x6  Code  Gb  stm32f1xx_ll_utils.o [1]
+LL_TIM_BDTR_Init        0x08000eb3   0x48  Code  Gb  stm32f1xx_ll_tim.o [1]
+LL_TIM_CC_EnableChannel(TIM_TypeDef *, unsigned int)
+                        0x0800159b    0x8  Code  Lc  Buzzer.o [1]
+LL_TIM_CC_EnableChannel(TIM_TypeDef *, unsigned int)
+                        0x080015e3    0x8  Code  Lc  Motor.o [1]
+LL_TIM_CC_EnableChannel(TIM_TypeDef *, unsigned int)
+                        0x080012a9    0x8  Code  Lc  Sonar.o [1]
+LL_TIM_ClearFlag_CC1(TIM_TypeDef *)
+                        0x080012c1    0x8  Code  Lc  Sonar.o [1]
+LL_TIM_ClearFlag_CC2(TIM_TypeDef *)
+                        0x080012d3    0x8  Code  Lc  Sonar.o [1]
+LL_TIM_ClearFlag_CC3(TIM_TypeDef *)
+                        0x080012e5    0x8  Code  Lc  Sonar.o [1]
+LL_TIM_ClearFlag_CC4(TIM_TypeDef *)
+                        0x080012f7    0x8  Code  Lc  Sonar.o [1]
+LL_TIM_DisableARRPreload(TIM_TypeDef *)
+                        0x08000299    0xa  Code  Lc  main.o [1]
+LL_TIM_DisableCounter(TIM_TypeDef *)
+                        0x08001297    0xa  Code  Lc  Sonar.o [1]
+LL_TIM_DisableMasterSlaveMode(TIM_TypeDef *)
+                        0x0800050f    0xa  Code  Lc  main.o [1]
+LL_TIM_EnableARRPreload(TIM_TypeDef *)
+                        0x0800028f    0xa  Code  Lc  main.o [1]
+LL_TIM_EnableCounter(TIM_TypeDef *)
+                        0x0800158d    0xa  Code  Lc  Buzzer.o [1]
+LL_TIM_EnableCounter(TIM_TypeDef *)
+                        0x080015d5    0xa  Code  Lc  Motor.o [1]
+LL_TIM_EnableCounter(TIM_TypeDef *)
+                        0x0800128d    0xa  Code  Lc  Sonar.o [1]
+LL_TIM_GenerateEvent_UPDATE(TIM_TypeDef *)
+                        0x08000da1    0xa  Code  Lc  stm32f1xx_ll_tim.o [1]
+LL_TIM_GetCounter(TIM_TypeDef *)
+                        0x080012a5    0x4  Code  Lc  Sonar.o [1]
+LL_TIM_IC_GetCaptureCH1(TIM_TypeDef *)
+                        0x08000bc1    0x4  Code  Lc  robocar.o [1]
+LL_TIM_IC_GetCaptureCH1(TIM_TypeDef *)
+                        0x080012b1    0x4  Code  Lc  Sonar.o [1]
+LL_TIM_IC_GetCaptureCH2(TIM_TypeDef *)
+                        0x08000bc5    0x4  Code  Lc  robocar.o [1]
+LL_TIM_IC_GetCaptureCH2(TIM_TypeDef *)
+                        0x080012b5    0x4  Code  Lc  Sonar.o [1]
+LL_TIM_IC_GetCaptureCH3(TIM_TypeDef *)
+                        0x08000bc9    0x4  Code  Lc  robocar.o [1]
+LL_TIM_IC_GetCaptureCH3(TIM_TypeDef *)
+                        0x080012b9    0x4  Code  Lc  Sonar.o [1]
+LL_TIM_IC_GetCaptureCH4(TIM_TypeDef *)
+                        0x08000bcd    0x4  Code  Lc  robocar.o [1]
+LL_TIM_IC_GetCaptureCH4(TIM_TypeDef *)
+                        0x080012bd    0x4  Code  Lc  Sonar.o [1]
+LL_TIM_IC_SetActiveInput(TIM_TypeDef *, unsigned int, unsigned int)
+                        0x0800035b   0x6a  Code  Lc  main.o [1]
+LL_TIM_IC_SetFilter(TIM_TypeDef *, unsigned int, unsigned int)
+                        0x0800042f   0x6a  Code  Lc  main.o [1]
+LL_TIM_IC_SetPolarity(TIM_TypeDef *, unsigned int, unsigned int)
+                        0x08000499   0x5c  Code  Lc  main.o [1]
+LL_TIM_IC_SetPrescaler(TIM_TypeDef *, unsigned int, unsigned int)
+                        0x080003c5   0x6a  Code  Lc  main.o [1]
+LL_TIM_Init             0x08000dab   0xb0  Code  Gb  stm32f1xx_ll_tim.o [1]
+LL_TIM_IsActiveFlag_CC1(TIM_TypeDef *)
+                        0x080012c9    0xa  Code  Lc  Sonar.o [1]
+LL_TIM_IsActiveFlag_CC2(TIM_TypeDef *)
+                        0x080012db    0xa  Code  Lc  Sonar.o [1]
+LL_TIM_IsActiveFlag_CC3(TIM_TypeDef *)
+                        0x080012ed    0xa  Code  Lc  Sonar.o [1]
+LL_TIM_IsActiveFlag_CC4(TIM_TypeDef *)
+                        0x080012ff    0xa  Code  Lc  Sonar.o [1]
+LL_TIM_OC_DisableFast(TIM_TypeDef *, unsigned int)
+                        0x080002a3   0x5c  Code  Lc  main.o [1]
+LL_TIM_OC_EnablePreload(TIM_TypeDef *, unsigned int)
+                        0x080002ff   0x5c  Code  Lc  main.o [1]
+LL_TIM_OC_Init          0x08000e5b   0x58  Code  Gb  stm32f1xx_ll_tim.o [1]
+LL_TIM_OC_SetCompareCH1(TIM_TypeDef *, unsigned int)
+                        0x080015eb    0x4  Code  Lc  Motor.o [1]
+LL_TIM_OC_SetCompareCH1(TIM_TypeDef *, unsigned int)
+                        0x08000d91    0x4  Code  Lc  stm32f1xx_ll_tim.o [1]
+LL_TIM_OC_SetCompareCH2(TIM_TypeDef *, unsigned int)
+                        0x08000d95    0x4  Code  Lc  stm32f1xx_ll_tim.o [1]
+LL_TIM_OC_SetCompareCH3(TIM_TypeDef *, unsigned int)
+                        0x08000d99    0x4  Code  Lc  stm32f1xx_ll_tim.o [1]
+LL_TIM_OC_SetCompareCH4(TIM_TypeDef *, unsigned int)
+                        0x08000d9d    0x4  Code  Lc  stm32f1xx_ll_tim.o [1]
+LL_TIM_SetAutoReload(TIM_TypeDef *, unsigned int)
+                        0x08001597    0x4  Code  Lc  Buzzer.o [1]
+LL_TIM_SetAutoReload(TIM_TypeDef *, unsigned int)
+                        0x080015df    0x4  Code  Lc  Motor.o [1]
+LL_TIM_SetAutoReload(TIM_TypeDef *, unsigned int)
+                        0x08000d89    0x4  Code  Lc  stm32f1xx_ll_tim.o [1]
+LL_TIM_SetClockSource(TIM_TypeDef *, unsigned int)
+                        0x080004f5    0xe  Code  Lc  main.o [1]
+LL_TIM_SetCounter(TIM_TypeDef *, unsigned int)
+                        0x080012a1    0x4  Code  Lc  Sonar.o [1]
+LL_TIM_SetPrescaler(TIM_TypeDef *, unsigned int)
+                        0x08000d85    0x4  Code  Lc  stm32f1xx_ll_tim.o [1]
+LL_TIM_SetRepetitionCounter(TIM_TypeDef *, unsigned int)
+                        0x08000d8d    0x4  Code  Lc  stm32f1xx_ll_tim.o [1]
+LL_TIM_SetTriggerOutput(TIM_TypeDef *, unsigned int)
+                        0x08000503    0xc  Code  Lc  main.o [1]
+Led2::Led2(GPIO_TypeDef *, unsigned int, GPIO_TypeDef *, unsigned int)
+                        0x0800150f   0x26  Code  Gb  Led2.o [1]
+Led2::Set0()            0x08001577   0x16  Code  Gb  Led2.o [1]
+Led2::SetG()            0x0800154b   0x16  Code  Gb  Led2.o [1]
+Led2::SetR()            0x08001535   0x16  Code  Gb  Led2.o [1]
+Led2::SetY()            0x08001561   0x16  Code  Gb  Led2.o [1]
+MX_GPIO_Init()          0x08000a4f   0xca  Code  Lc  main.o [1]
+MX_TIM2_Init()          0x080005ff   0xc0  Code  Lc  main.o [1]
+MX_TIM3_Init()          0x080006bf   0xbe  Code  Lc  main.o [1]
+MX_TIM4_Init()          0x0800077d  0x132  Code  Lc  main.o [1]
+MX_TIM5_Init()          0x080008af   0xb0  Code  Lc  main.o [1]
+MX_TIM8_Init()          0x0800095f   0xf0  Code  Lc  main.o [1]
+MemManage_Handler       0x08000d77    0x2  Code  Gb  stm32f1xx_it.o [1]
+Motor::Motor(TIM_TypeDef *, unsigned int, unsigned short, unsigned short, unsigned short)
+                        0x080015ef   0x42  Code  Gb  Motor.o [1]
+Motor::SetSpeed(short)  0x08001631   0x30  Code  Gb  Motor.o [1]
+NMI_Handler             0x08000d73    0x2  Code  Gb  stm32f1xx_it.o [1]
+NVIC_SetPriorityGrouping(unsigned int)
+                        0x08000131   0x24  Code  Lc  main.o [1]
+OC1Config(TIM_TypeDef *, LL_TIM_OC_InitTypeDef *)
+                        0x08000efb   0x90  Code  Lc  stm32f1xx_ll_tim.o [1]
+OC2Config(TIM_TypeDef *, LL_TIM_OC_InitTypeDef *)
+                        0x08000f8b   0x90  Code  Lc  stm32f1xx_ll_tim.o [1]
+OC3Config(TIM_TypeDef *, LL_TIM_OC_InitTypeDef *)
+                        0x0800101b   0x90  Code  Lc  stm32f1xx_ll_tim.o [1]
+OC4Config(TIM_TypeDef *, LL_TIM_OC_InitTypeDef *)
+                        0x080010ab   0x72  Code  Lc  stm32f1xx_ll_tim.o [1]
+OFFSET_TAB_CCMRx        0x08001c54    0x8  Data  Lc  main.o [1]
+PendSV_Handler          0x08000d81    0x2  Code  Gb  stm32f1xx_it.o [1]
+Region$$Table$$Base     0x08001be0          --   Gb  - Linker created -
+Region$$Table$$Limit    0x08001bf4          --   Gb  - Linker created -
+Robocar::Robocar()      0x08000bd1   0x9e  Code  Gb  robocar.o [1]
+Robocar::Run()          0x08000c6f   0x92  Code  Gb  robocar.o [1]
+SHIFT_TAB_CCxP          0x08001c6c    0x8  Data  Lc  main.o [1]
+SHIFT_TAB_ICxx          0x08001c64    0x8  Data  Lc  main.o [1]
+SHIFT_TAB_OCxx          0x08001c5c    0x8  Data  Lc  main.o [1]
+SVC_Handler             0x08000d7d    0x2  Code  Gb  stm32f1xx_it.o [1]
+Sonar::Sonar(GPIO_TypeDef *, unsigned int, TIM_TypeDef *, unsigned int)
+                        0x08001309   0x5e  Code  Gb  Sonar.o [1]
+Sonar::Start()          0x08001367   0x3a  Code  Gb  Sonar.o [1]
+Sonar::WaitResult()     0x080013a1  0x11a  Code  Gb  Sonar.o [1]
+SysTick_Handler         0x08000d83    0x2  Code  Gb  stm32f1xx_it.o [1]
+SystemClock_Config()    0x0800058d   0x72  Code  Gb  main.o [1]
+SystemCoreClock         0x20000000    0x4  Data  Gb  system_stm32f1xx.o [1]
+SystemInit              0x08001b51   0x4e  Code  Gb  system_stm32f1xx.o [1]
+UsageFault_Handler      0x08000d7b    0x2  Code  Gb  stm32f1xx_it.o [1]
+__aeabi_cfrcmple        0x08001661         Code  Gb  FltCmpGe.o [4]
+__aeabi_d2f             0x08001ac1         Code  Gb  DblToFlt.o [4]
+__aeabi_ddiv            0x08001879         Code  Gb  DblDiv.o [4]
+__aeabi_dmul            0x080016d5         Code  Gb  DblMul.o [4]
+__aeabi_memclr4         0x08000d6d         Code  Gb  ABImemclr4.o [5]
+__aeabi_ui2d            0x080016b9         Code  Gb  I32ToDbl.o [4]
+__cmain                 0x08001bf5         Code  Gb  cmain.o [5]
+__exit                  0x08001c25   0x14  Code  Gb  exit.o [6]
+__iar_Memset4_word      0x08001685         Code  Gb  ABImemset48.o [5]
+__iar_Memset8_word      0x08001685         Code  Gb  ABImemset48.o [5]
+__iar_copy_init3        0x08000b93   0x2e  Code  Gb  copy_init3.o [5]
+__iar_data_init3        0x08001bb9   0x28  Code  Gb  data_init.o [5]
+__iar_program_start     0x08001c49         Code  Gb  cstartup_M.o [5]
+__iar_ui2d              0x080016bd         Code  Gb  I32ToDbl.o [4]
+__low_level_init        0x08001c0f    0x4  Code  Gb  low_level_init.o [3]
+__vector_table          0x08000000         Data  Gb  startup_stm32f103xe.o [1]
+_call_main              0x08001c01         Code  Gb  cmain.o [5]
+_exit                   0x08001c19         Code  Gb  cexit.o [5]
+_main                   0x08001c0b         Code  Gb  cmain.o [5]
+exit                    0x08001c13    0x4  Code  Gb  exit.o [3]
+main                    0x08000547   0x46  Code  Gb  main.o [1]
+
+
+[1] = D:\Projects\Robocar\EWARM\Robocar\Obj
+[2] = command line
+[3] = dl7M_tln.a
+[4] = m7M_tl.a
+[5] = rt7M_tl.a
+[6] = shb_l.a
+
+  7 472 bytes of readonly  code memory
+     56 bytes of readonly  data memory
+  1 028 bytes of readwrite data memory
+
+Errors: none
+Warnings: none
